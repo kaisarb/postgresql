@@ -1,6 +1,7 @@
 package com.kb.postgresql.service;
 
 import com.kb.postgresql.entity.Department;
+import com.kb.postgresql.error.DepartmentNotFoundException;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ public interface DepartmentService {
 
     public List<Department> fetchDepartmentList();
 
-   public Department fetchDepartmentById(Long departmentId);
+   public Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException;
 
     public void deleteDepartmentById(Long departmentId);
 
